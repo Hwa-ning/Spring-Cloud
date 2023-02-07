@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: config
+  profiles:
+    active: local
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Hwa-ning/Spring-Cloud-Config.git
+          #        파일 시스템 사용시
+          #        native:
+          #          search-locations: file:///Users/hwaning1/MyDirectory/config
+          #          search-locations: classpath:/config  - src/main/resources/config 폴더에서 찾음
+server:
+  port: ${port:18088}
+
+eureka:
+  client:
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:18086/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' # 실서비스에선 반드시 *이 아닌 노출시킬 endpoint만 노출시키거나 보안 적용 필수적임
