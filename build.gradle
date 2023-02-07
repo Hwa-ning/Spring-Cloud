@@ -65,6 +65,7 @@ project(':config') {
 
 project(':core') {
     dependencies {
+        // compileOnly project(':core')
         // 컴파일시 core 모듈을 가져온다.
         implementation 'org.springframework.boot:spring-boot-starter-web'
     }
@@ -78,6 +79,8 @@ project(':gateway') {
 
 project(':service-one') {
     dependencies {
+        // compileOnly project(':core')
+        // 컴파일시 core 모듈을 가져온다.
         implementation 'org.springframework.boot:spring-boot-starter-web:2.1.0.RELEASE'
     }
 }
