@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: one
+  profiles:
+    active:
+      - local
+  cloud:
+    config:
+      uri: http://localhost:18088
+eureka:
+  client:
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:18086/eureka/
