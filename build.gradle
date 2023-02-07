@@ -35,7 +35,10 @@ subprojects {
         compileOnly 'org.projectlombok:lombok'
 
         annotationProcessor 'org.projectlombok:lombok'
-        annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+        implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:2.1.0.RELEASE'
+        implementation 'org.springframework.cloud:spring-cloud-config-client:2.1.0.RELEASE'
         implementation 'org.springframework.boot:spring-boot-starter-actuator:2.1.0.RELEASE'
 
         testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
