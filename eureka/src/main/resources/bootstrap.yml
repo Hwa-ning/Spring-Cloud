@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: eureka
+  profiles:
+    active:
+      - local
+    cloud:
+      config:
+        uri:
+          - http://localhost:18088
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' # 실서비스에선 반드시 *이 아닌 노출시킬 endpoint만 노출 및 보안 적용 필수적임
+---
+
+server:
+  port: ${port:18086}
+
+spring:
+  profiles: local
+
+eureka:
+  instance:
+    hostname: localhost
+  server:
+    enable-self-preservation: true
+    eviction-interval-timer-in-ms: 3000
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:18086/eureka/
+logging:
+  level:
+    com:
+      netflix: off

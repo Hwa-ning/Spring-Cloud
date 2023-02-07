@@ -1,0 +1,10 @@
+rootProject.name = 'Spring-Cloud-Test'
+include 'eureka'
+include 'gateway'
+include 'config'
+include 'config'
+include 'config-service'
+include 'core'
+include 'service-one'
+include 'config'
+
