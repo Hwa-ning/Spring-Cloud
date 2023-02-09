@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: zuul
+  profiles:
+    active:
+      - local
+  cloud:
+    config:
+      uri: http://localhost:18088
+server:
+  port: ${port:18090}
