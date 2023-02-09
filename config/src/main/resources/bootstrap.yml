@@ -12,6 +12,13 @@ spring:
           #        native:
           #          search-locations: file:///Users/hwaning1/MyDirectory/config
           #          search-locations: classpath:/config  - src/main/resources/config 폴더에서 찾음
+    bus:
+      enabled: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
 server:
   port: ${port:18088}
 
