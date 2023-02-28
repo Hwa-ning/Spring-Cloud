@@ -9,10 +9,10 @@ spring:
         git:
           uri: https://github.com/Hwa-ning/Spring-Cloud-Config.git
           # default-label: master # config 설정값을 불러올 branch 선택
-          # search-paths: # Git에서 config 설정값을 찾아올 디렉토리 설정 
-          #   - config 
+          # search-paths: 
+          #   - config # Git에서 config 설정값을 찾아올 디렉토리 설정 
           
-          # === 파일 시스템 사용시 ==
+          # === 파일 시스템 사용시 ===
           # native:
           #   search-locations: file:///Users/hwaning1/MyDirectory/config # 파일시스템 경로대로 찾음
           #   search-locations: classpath:/config  # src/main/resources/config # 현재 프로젝트 디렉토리 /resources 기준으로 경로에서 찾음
